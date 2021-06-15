@@ -83,17 +83,17 @@ const mutation = new GraphQLObjectType({
             }
         },
 
-        deleteCustomer:{
-                    type:CustomerType,
-                    args:{
-                        id: {type: new GraphQLNonNull(GraphQLString)},                
-                    },
-                    resolve(parentValue,args){
+        // deleteCustomer:{
+        //             type:CustomerType,
+        //             args:{
+        //                 id: {type: new GraphQLNonNull(GraphQLString)},                
+        //             },
+        //             resolve(parentValue,args){
         
-                        return axios.delete('http://localhost:3000/customers/'+args.id)
-                          .then(res => res.data);
-                    }
-                },         
+        //                 return axios.delete('http://localhost:3000/customers/'+args.id)
+        //                   .then(res => res.data);
+        //             }
+        //         },         
         
         editCustomer:{
             type:CustomerType,
