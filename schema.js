@@ -95,18 +95,18 @@ const mutation = new GraphQLObjectType({
                     }
                 },         
         
-        editCustomer:{
-            type:CustomerType,
-            args:{
-                id: {type: new GraphQLNonNull(GraphQLString)},
-                name: {type: GraphQLString},
-                email: {type: GraphQLString},
-                age: {type: GraphQLInt}
-            },
-            resolve(parentValue,args){
-                return axios.patch('http://localhost:3000/customers/'+id, args)            
-                 .then(res => res.data);
-            }
+        // editCustomer:{
+        //     type:CustomerType,
+        //     args:{
+        //         id: {type: new GraphQLNonNull(GraphQLString)},
+        //         name: {type: GraphQLString},
+        //         email: {type: GraphQLString},
+        //         age: {type: GraphQLInt}
+        //     },
+        //     resolve(parentValue,args){
+        //         return axios.patch('http://localhost:3000/customers/'+id, args)            
+        //          .then(res => res.data);
+        //     }
         },  
     } 
 });
